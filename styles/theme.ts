@@ -5,13 +5,13 @@ export const theme = extendTheme({
     dark: { 
       black: '#00000',
       text: '#47585B',
-      info: '#99999',
+      info: '#999999',
       info50: 'rgba(153, 153, 153, 0.5)'
     },
-    light: {
-      white: '#fff',
-      text: '#F5F8FA',
-      info: '#DADADA'
+    gray: {
+      '100': '#F5F8FA', // light text
+      '300': '#DADADA', // light info 
+      '900': '999999', // dark info
     }
   },
   fonts: {
