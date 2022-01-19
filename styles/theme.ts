@@ -11,7 +11,9 @@ export const theme = extendTheme({
     gray: {
       '100': '#F5F8FA', // light text
       '300': '#DADADA', // light info 
-      '900': '999999', // dark info
+      '500': 'rgba(153, 153, 153, 0.5)', // info50
+      '800': '#999999', // dark info
+      '900': '#47585B', // dark text
     }
   },
   fonts: {

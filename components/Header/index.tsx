@@ -1,6 +1,5 @@
-import { Flex } from '@chakra-ui/react'
-import { Image } from '@chakra-ui/react'
-
+import { Flex, Image } from '@chakra-ui/react'
+ 
 
 export function Header(): JSX.Element {
   return (
