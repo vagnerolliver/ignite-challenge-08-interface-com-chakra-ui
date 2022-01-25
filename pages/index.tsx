@@ -1,9 +1,29 @@
-import { Box, Flex, Text, Heading ,Image, SimpleGrid, VStack, Center, Divider } from "@chakra-ui/react"
+import { Box, Flex, Text, Heading ,Image, SimpleGrid, VStack, Center, Divider, Container } from "@chakra-ui/react"
 import type { NextPage } from 'next'
 
 import { Header } from '../components/Header'
- 
+import { Slider } from '../components/Slider'
+
 const Home: NextPage = (): JSX.Element => {
+  
+  const slides = [
+    { 
+      src: '/images/slider/img1.png',
+      title: 'Europa',
+      subtitle: 'O continente mais antigo'
+    },
+    { 
+      src: '/images/slider/img2.jpeg',
+      title: 'Africa',
+      subtitle: 'O continente mais moderno'
+    },
+    { 
+      src: '/images/slider/img3.jpeg',
+      title: 'América',
+      subtitle: 'O continente mais rico'
+    }
+  ]
+
   return (
     <>
       <Header />
@@ -42,7 +62,7 @@ const Home: NextPage = (): JSX.Element => {
         </Box>
       </Box>
 
-      <Box maxWidth={1060} mx="auto" mt="100">
+      <Container maxWidth={1060} mx="auto" mt="100">
         <SimpleGrid columns={5} spacing={4} align="center">
           <VStack spacing={6}>
             <Image src='/images/cocktail.svg' width="85" height="85" alt='Cocktail' mx="auto" />
@@ -65,11 +85,19 @@ const Home: NextPage = (): JSX.Element => {
             <Text color='gray.900' fontSize="24" fontWeight="600">e mais...</Text>
           </VStack>
         </SimpleGrid>
-      </Box>
+   
 
-      <Center height='125'>
-        <Divider orientation='horizontal' maxWidth={90} borderColor='gray.900'/>
-      </Center>
+        <Center height='125'>
+          <Divider orientation='horizontal' maxWidth={90} borderColor='gray.900'/>
+        </Center>
+
+        <Heading as="h2" textAlign="center"> 
+          Vamos nessa? <br />
+          Então escolha seu continente
+        </Heading>
+
+        <Slider slides={slides} />
+      </Container>
     </>
   )
 }
