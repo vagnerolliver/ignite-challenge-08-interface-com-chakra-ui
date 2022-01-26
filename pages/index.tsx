@@ -46,7 +46,7 @@ const Home: NextPage = (): JSX.Element => {
             w="100%" 
           >
             <Box w="100%" maxW="430" mt="8">
-              <Heading as='h2' fontSize="36" mb="5" color="gray.100">
+              <Heading as='h2' fontSize="36" mb={6} color="gray.100">
                 5 Continentes,
                 infinitas possibilidades.
               </Heading>
@@ -91,12 +91,21 @@ const Home: NextPage = (): JSX.Element => {
           <Divider orientation='horizontal' maxWidth={90} borderColor='gray.900'/>
         </Center>
 
-        <Heading as="h2" textAlign="center"> 
+        <Heading 
+          as="h2" 
+          textAlign="center" 
+          fontSize="36" 
+          fontWeight='400' 
+          color="gray.900"
+          mb={12}
+        > 
           Vamos nessa? <br />
           Então escolha seu continente
         </Heading>
 
         <Slider slides={slides} />
+
+        <Box mb={10} />
       </Container>
     </>
   )
