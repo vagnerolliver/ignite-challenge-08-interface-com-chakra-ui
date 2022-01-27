@@ -1,5 +1,5 @@
-import { Flex, Image } from '@chakra-ui/react'
- 
+import { Flex, Image, Link } from '@chakra-ui/react'
+import NextLink from 'next/link' 
 
 export function Header(): JSX.Element {
   return (
@@ -12,7 +12,11 @@ export function Header(): JSX.Element {
       mx="auto"
       w="100%"
     >
-      <Image src='/images/logo.svg' alt='Logo' />
+      <NextLink href="/" passHref>
+        <Link>
+          <Image src='/images/logo.svg' alt='Logo' />
+        </Link>
+      </NextLink>
     </Flex>
   );
 }

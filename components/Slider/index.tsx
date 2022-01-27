@@ -1,6 +1,7 @@
-import { Heading, Text, Flex, Box } from '@chakra-ui/react'
+import { Heading, Text, Box, Link } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper'
+import NextLink from 'next/link'
 
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -50,13 +51,24 @@ export function Slider({ slides }: SliderProps): JSX.Element  {
               <Text color="gray.300" fontWeight="700" fontSize="24px">{slide.subtitle}</Text>
             </Box>
 
+            <NextLink href="post/fake" passHref>
+              <Link 
+                _hover={{ textDecoration:  'none' }}
+                position="absolute"
+                display="block"
+                height="100%"
+                width="100%"
+                zIndex="3"
+              />
+            </NextLink>
+
             <Box
               position="absolute"
-              top= "0"
-              right= "0"
-              backgroundColor= "rgba(28, 20, 1, 0.35)"
-              width= "100%"
-              height= "100%"
+              top="0"
+              right="0"
+              backgroundColor="rgba(28, 20, 1, 0.35)"
+              width="100%"
+              height="100%"
               zIndex="1" 
             />
           </Box>
