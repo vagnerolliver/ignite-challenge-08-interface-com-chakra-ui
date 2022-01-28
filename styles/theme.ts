@@ -8,6 +8,9 @@ export const theme = extendTheme({
       '500': 'rgba(153, 153, 153, 0.5)', // info50
       '800': '#999999', // dark info
       '900': '#47585B', // dark text
+    },
+    yellow: {
+      '300': '#FFBA08'
     }
   },
   fonts: {
