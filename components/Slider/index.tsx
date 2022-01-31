@@ -45,10 +45,10 @@ export function Slider({ slides }: SliderProps): JSX.Element  {
               align="center"
               zIndex="2"
             > 
-              <Heading as="h3" color="gray.100" fontSize="48px"> 
+              <Heading as="h3" color="light.200" fontSize="48px"> 
                 {slide.title}
               </Heading>
-              <Text color="gray.300" fontWeight="700" fontSize="24px">{slide.subtitle}</Text>
+              <Text color="light.300" fontWeight="700" fontSize="24px">{slide.subtitle}</Text>
             </Box>
 
             <NextLink href="post/fake" passHref>

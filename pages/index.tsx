@@ -8,17 +8,17 @@ const Home: NextPage = (): JSX.Element => {
   
   const slides = [
     { 
-      src: '/images/slider/img1.png',
+      src: '/images/home/slider/img1.png',
       title: 'Europa',
       subtitle: 'O continente mais antigo'
     },
     { 
-      src: '/images/slider/img2.jpeg',
+      src: '/images/home/slider/img2.jpeg',
       title: 'Africa',
       subtitle: 'O continente mais moderno'
     },
     { 
-      src: '/images/slider/img3.jpeg',
+      src: '/images/home/slider/img3.jpeg',
       title: 'América',
       subtitle: 'O continente mais rico'
     }
@@ -28,12 +28,12 @@ const Home: NextPage = (): JSX.Element => {
     <>
       <Header />
       <Box
-        backgroundImage="url('/images/bg-banner-repeat.png')"
+        backgroundImage="url('/images/home/bg-banner-repeat.png')"
         backgroundPosition="left"
         backgroundRepeat="repeat-x"
       >
         <Box
-          backgroundImage="url('/images/bg-banner-home.svg')"
+          backgroundImage="url('/images/home/bg-banner-home.svg')"
           backgroundPosition="left"
           backgroundRepeat="no-repeat"
         >
@@ -46,17 +46,17 @@ const Home: NextPage = (): JSX.Element => {
             w="100%" 
           >
             <Box w="100%" maxW="430" mt="8">
-              <Heading as='h2' fontSize="36" mb={6} color="gray.100">
+              <Heading as='h2' fontSize="36" mb={6} color="light.200">
                 5 Continentes,
                 infinitas possibilidades.
               </Heading>
-              <Text fontSize="20" color='gray.300'>
+              <Text fontSize="20" color='light.300'>
                 Chegou a hora de tirar do papel a viagem que você sempre sonhou.
               </Text>
             </Box>
 
             <Box w="100%" textAlign="right" alignSelf="flex-end" pr="4">
-              <Image src='/images/airplane-banner-home.svg' width="417px" ml="auto" alt='Airplane' />
+              <Image src='/images/home/airplane-banner-home.svg' width="417px" ml="auto" alt='Airplane' />
             </Box>
           </Flex>
         </Box>
@@ -65,30 +65,30 @@ const Home: NextPage = (): JSX.Element => {
       <Container maxWidth={1060} mx="auto" mt="100">
         <SimpleGrid columns={5} spacing={4} align="center">
           <VStack spacing={6}>
-            <Image src='/images/cocktail.svg' width="85" height="85" alt='Cocktail' mx="auto" />
-            <Text color='gray.900' fontSize="24" fontWeight="600">vida noturna</Text>
+            <Image src='/images/home/cocktail.svg' width="85" height="85" alt='Cocktail' mx="auto" />
+            <Text color='dark.200' fontSize="24" fontWeight="600">vida noturna</Text>
           </VStack>
           <VStack spacing={6}>
-            <Image src='/images/surf.svg' width="85" height="85" alt='Surf' mx="auto" />
-            <Text color='gray.900' fontSize="24" fontWeight="600">praia</Text>
+            <Image src='/images/home/surf.svg' width="85" height="85" alt='Surf' mx="auto" />
+            <Text color='dark.200' fontSize="24" fontWeight="600">praia</Text>
           </VStack>
           <VStack spacing={6}>
-            <Image src='/images/building.svg' width="85" height="85" alt='Building' mx="auto" />
-            <Text color='gray.900' fontSize="24" fontWeight="600">moderno</Text>
+            <Image src='/images/home/building.svg' width="85" height="85" alt='Building' mx="auto" />
+            <Text color='dark.200' fontSize="24" fontWeight="600">moderno</Text>
           </VStack>
           <VStack spacing={6}>
-            <Image src='/images/museum.svg' width="85" height="85" alt='Museum' mx="auto" />
-            <Text color='gray.900' fontSize="24" fontWeight="600">clássico</Text>
+            <Image src='/images/home/museum.svg' width="85" height="85" alt='Museum' mx="auto" />
+            <Text color='dark.200' fontSize="24" fontWeight="600">clássico</Text>
           </VStack>
           <VStack spacing={6}>
-            <Image src='/images/earth.svg' width="85" height="85" alt='Earth' mx="auto" />
-            <Text color='gray.900' fontSize="24" fontWeight="600">e mais...</Text>
+            <Image src='/images/home/earth.svg' width="85" height="85" alt='Earth' mx="auto" />
+            <Text color='dark.200' fontSize="24" fontWeight="600">e mais...</Text>
           </VStack>
         </SimpleGrid>
    
 
         <Center height='125'>
-          <Divider orientation='horizontal' maxWidth={90} borderColor='gray.900'/>
+          <Divider orientation='horizontal' maxWidth={90} borderColor='dark.200'/>
         </Center>
 
         <Heading 
@@ -96,7 +96,7 @@ const Home: NextPage = (): JSX.Element => {
           textAlign="center" 
           fontSize="36" 
           fontWeight='400' 
-          color="gray.900"
+          color="dark.200"
           mb={12}
         > 
           Vamos nessa? <br />
