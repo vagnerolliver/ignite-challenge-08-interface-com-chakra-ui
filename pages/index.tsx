@@ -27,35 +27,48 @@ const Home: NextPage = (): JSX.Element => {
   return (
     <>
       <Header />
+
       <Box
         backgroundImage="url('/images/home/bg-banner-repeat.png')"
-        backgroundPosition="left"
         backgroundRepeat="repeat-x"
+        backgroundPosition="left"
       >
         <Box
           backgroundImage="url('/images/home/bg-banner-home.svg')"
-          backgroundPosition="left"
           backgroundRepeat="no-repeat"
+          backgroundPosition="left"
         >
           <Flex 
-            maxW="1160" 
+            height={{ base:'163px', md:"368" }}
+            justify={{ md: 'space-around' }}
+            paddingLeft={5}
             align="center"
-            justify="space-around" 
-            height="368"
+            maxW="1160" 
             mx="auto" 
             w="100%" 
           >
-            <Box w="100%" maxW="430" mt="8">
-              <Heading as='h2' fontSize="36" mb={6} color="light.200">
+            <Box w="100%" maxW="430" mt={{ md:'8' }}>
+              <Heading 
+                fontSize={{ base: '20px', md: '36px' }} 
+                mb={{ base:2, md:6 }}
+                color="light.200"
+                as='h2' 
+              >
                 5 Continentes,
                 infinitas possibilidades.
               </Heading>
-              <Text fontSize="20" color='light.300'>
+              <Text fontSize={{ base: '14px', md: '20px' }} color='light.300'>
                 Chegou a hora de tirar do papel a viagem que você sempre sonhou.
               </Text>
             </Box>
 
-            <Box w="100%" textAlign="right" alignSelf="flex-end" pr="4">
+            <Box 
+              display={{ base: 'none', md: 'flex' }}
+              alignSelf="flex-end" 
+              textAlign="right" 
+              w="100%" 
+              pr="4" 
+            >
               <Image src='/images/home/airplane-banner-home.svg' width="417px" ml="auto" alt='Airplane' />
             </Box>
           </Flex>
