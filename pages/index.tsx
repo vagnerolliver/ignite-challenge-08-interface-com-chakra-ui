@@ -1,4 +1,5 @@
 import { Box, Flex, Text, Heading ,Image, SimpleGrid, VStack, Center, Divider, Container, useBreakpointValue, HStack } from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 
 import { Header } from '../components/Header'
@@ -6,10 +7,17 @@ import { Slider } from '../components/Slider'
 
 const Home: NextPage = (): JSX.Element => {
   
-  const isDesktopVersion = useBreakpointValue({
+  const [isDesktop, setIsDesktop] = useState<boolean|undefined>(true) 
+
+  const config = useBreakpointValue({
     base: false,
     md: true
   })
+
+  useEffect(() => {
+    setIsDesktop(config)
+  }, [])
+
 
   const slides = [
     { 
@@ -81,7 +89,7 @@ const Home: NextPage = (): JSX.Element => {
       </Box>
 
       <Container maxWidth={1060} mx='auto' mt={{base:10, md:20}}>
-        { isDesktopVersion 
+        { isDesktop 
             ? 
               <SimpleGrid columns={5} spacing={4} align='center'>
                 <VStack spacing={6}>
