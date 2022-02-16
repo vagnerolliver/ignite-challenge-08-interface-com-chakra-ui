@@ -1,4 +1,4 @@
-import { Heading, Text, Box, Link } from '@chakra-ui/react'
+import { Heading, Text, Box, Link, useBreakpointValue } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper'
 import NextLink from 'next/link'
@@ -6,6 +6,7 @@ import NextLink from 'next/link'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css'
+import { useState } from 'react'
 
 interface Slide { 
   src: string,
@@ -18,6 +19,13 @@ interface SliderProps {
 }
 
 export function Slider({ slides }: SliderProps): JSX.Element  {
+  const [isDesktop, setIsDesktop] = useState<boolean|undefined>(true) 
+
+  const config = useBreakpointValue({
+    base: false,
+    md: true
+  })
+
   return (
     <Swiper
       onSlideChange={() => console.log('slide change')}
@@ -30,7 +38,7 @@ export function Slider({ slides }: SliderProps): JSX.Element  {
       {slides && slides.map(slide =>(
         <SwiperSlide key={slide.title}>
           <Box 
-            height="450"
+            height={{ base: '250px', md: '450px' }}
             backgroundImage={slide.src}
             backgroundRepeat="no-repeat"
             backgroundPosition="center"
@@ -45,10 +53,17 @@ export function Slider({ slides }: SliderProps): JSX.Element  {
               align="center"
               zIndex="2"
             > 
-              <Heading as="h3" color="light.200" fontSize="48px"> 
+              <Heading 
+                fontSize={{ base: '24px', md: '48px'}}
+                color="light.200" 
+                as="h3"
+                mb={{ base: 2 }} 
+              > 
                 {slide.title}
               </Heading>
-              <Text color="light.300" fontWeight="700" fontSize="24px">{slide.subtitle}</Text>
+              <Text color="light.300" fontWeight="700" fontSize={{ base: '14px', md: '24px'}}>
+                {slide.subtitle}
+              </Text>
             </Box>
 
             <NextLink href="post/fake" passHref>
