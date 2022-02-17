@@ -153,7 +153,7 @@ const Home: NextPage = (): JSX.Element => {
         <Heading 
           as='h2' 
           textAlign='center' 
-          fontSize='36' 
+          fontSize={{base: '20px', md: '36px'}} 
           fontWeight='400' 
           color='dark.200'
           mb={12}
